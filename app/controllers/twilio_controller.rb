@@ -8,7 +8,7 @@ class TwilioController < ApplicationController
   def call_tracking
 
 
-    @number = Number.where(:tracking_number => params[:To])
+    @number = Number.where(:tracking_number => params[:To]).first
     @call = Call.where(:CallSid => params[:CallSid]).first_or_create
 
     @call.number_id = @number
