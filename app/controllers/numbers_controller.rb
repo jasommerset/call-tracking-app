@@ -32,7 +32,7 @@ class NumbersController < ApplicationController
 
     begin 
         @client = Twilio::REST::Client.new BwCallTracking::Application.config.account_sid, BwCallTracking::Application.config.auth_token 
-        number = @client.account.incoming_phone_numbers.create(:area_code => @number.area_code[1..3], :voice_url => BwCallTracking::Application.config.voice_url)
+        number = @client.account.incoming_phone_numbers.create(:area_code => @number.area_code[1..3], :voice_url => BwCallTracking::Application.config.voice_url, :status_callback => BwCallTracking::Application.config.voice_url)
         @number.tracking_number = number.phone_number
     rescue StandardError => e
         puts "ERROR: "+e.message    
