@@ -17,10 +17,11 @@
 //= require turbolinks
 //= require_tree .
 
-
-$().ready(function(){
-
+var ready;
+ready = function() {
   $('.input-mask-areacode').mask('(999) XXX-XXXX');
   $('.input-mask-phone').mask('(999) 999-9999');
+};
 
-});
+$(document).ready(ready);
+$(document).on('page:load', ready);
