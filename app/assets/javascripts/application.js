@@ -11,17 +11,17 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require jquery.maskedinput.min.js
 //= require turbolinks
 //= require_tree .
 
-var ready;
-ready = function() {
+
+$().ready(function(){
+
   $('.input-mask-areacode').mask('(999) XXX-XXXX');
   $('.input-mask-phone').mask('(999) 999-9999');
-};
 
-$(document).ready(ready);
-$(document).on('page:load', ready);
+});
