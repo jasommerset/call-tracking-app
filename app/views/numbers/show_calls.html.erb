@@ -6,8 +6,6 @@
         <th>Date Time</th>
         <th>From</th>
         <th>Call Tracking Number</th>
-        <th>Call Sid</th>
-        <th>Number Id</th>
         <th>Duration</th>
       </tr>
     </thead>
@@ -17,8 +15,6 @@
           <td><%=l call.created_at %></td>
           <td><%= call.From %></td>
           <td><%= call.To %></td>
-          <td><%= call.CallSid %></td>
-          <td><%= call.number_id %></td>
           <td><%= call.CallDuration %></td>
         </tr>
       <% end %>
