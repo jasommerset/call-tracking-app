@@ -39,6 +39,6 @@ gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) support
 gem "twitter-bootstrap-rails"
 
 gem 'phony', '2.2.3'
-
+gem 'jquery-turbolinks'
 
 
