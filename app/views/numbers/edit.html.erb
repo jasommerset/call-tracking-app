@@ -18,7 +18,7 @@
   <div class="control-group">
     <%= f.label :tracking_number, :class => 'control-label' %>
     <div class="controls">
-      <%= f.text_field :tracking_number, :default => number_to_phone(@number.tracking_number, :area_code => true).gsub(/^\+\d/, ''), :value => number_to_phone(@number.tracking_number, :area_code => true).gsub(/^\+\d/, ''), :class => 'form-control input-mask-areacode', :readonly => true%>
+      <%= f.text_field :tracking_number, :value => number_to_phone(@number.tracking_number, :area_code => true).gsub(/^\+\d/, ''), :class => 'form-control input-mask-areacode', :disabled => true%>
     </div>
     <%= error_span(@number[:tracking_number]) %>
   </div>
