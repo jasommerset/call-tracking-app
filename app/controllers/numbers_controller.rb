@@ -52,7 +52,7 @@ class NumbersController < ApplicationController
 
   # get /numbers/:id/calls
   def show_calls
-    @calls = Call.where(:number_id => @number)
+    @calls = Call.where(:number_id => params[:id])
 
   end
 
